@@ -1,0 +1,17 @@
+Draw 2D RT sequence to pseudo 3D volume RT in runtime.
+
+Create MF_PseudoVolumeTexUV:
+
+Material Expression Custom: 
+`PseudoVolumeTexture(Tex, TexSampler, Pos, XYFrames, numFrames)`
+
+with 4 inputs: 
+Texture2D `Tex` (Texture Object RT 2D); Vector3 `Pos` (WorldPosition); Vector2 `XYFrames` (8, 8); Scalar `numFrames` (64);
+
+Output Type: 
+`CMOT Float 3`
+
+RT 2D Resolution = 8*64, 8*64
+
+
+***High resolution will significantly decrease runtime perfomance.***
